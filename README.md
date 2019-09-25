@@ -1,3 +1,7 @@
+### I am giving you my project
+Image recognition for determining value of a broken phone 
+4 side image capture of a broken phone will be run against a pre trained model to determine damage, location and severity and finally determining the value of the phone. This can be hooked up to a vending machine and put in a mall where people can deposit a broken phone and get a check dispensed. 
+
 1.	Product Recommendation System:
 
   Idea: To develop a product recommendation system based on the usage trends of the consumer. 
