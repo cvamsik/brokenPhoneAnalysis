@@ -25,8 +25,11 @@ prices, final price of the mobile can be predicted.
 
 ## Technology stack
 **Programming languages & Libraries**: Python, Pytorch, scikit-learn
+
 **Technologies**: Machine Learning, Computer Vision, Deep Learning
+
 **Web Technologies**: HTML5, CSS3, JavaScript, React, Redux, Node.JS, REST API
+
 **Miscellaneous** : SOA, Agile, Git, Anaconda
 
 ## Architecture Diagram
@@ -35,6 +38,9 @@ prices, final price of the mobile can be predicted.
 
 ## Contributors
 C. Vamsi Krishna
+
 D. Sri Hari
+
 G. Vishal
+
 K. Farha
