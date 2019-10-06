@@ -1,31 +1,34 @@
-### I am giving you my project
-Image recognition for determining value of a broken phone 
-4 side image capture of a broken phone will be run against a pre trained model to determine damage, location and severity and finally determining the value of the phone. This can be hooked up to a vending machine and put in a mall where people can deposit a broken phone and get a check dispensed. 
+## Broken Phone Value Estimator
+An application which estimates the cost of a phone by considering its screen condition, whether
+broken or intact, and its original price.
 
-1.	Product Recommendation System:
+# Abstract
 
-  Idea: To develop a product recommendation system based on the usage trends of the consumer. 
-  Goal: To provide better recommendations to the consumers, decreasing their time spent upon searching the products and also to increase           the revenue of the seller by intelligently suggesting the products the consumer may buy.
-  Tech Stack: 
-        o	Embedded Deep Learning
-        o	Python
-        o	Pandas and NumPy libraries
+A streamlined process of turning in our old mobiles in exchange for cash would significantly
+simplify the hassle of online search of prices and negotiations for a fair deal. A proposed
+solution to this could be a vending machine which takes the phone, scans it and reckons the
+price of it. If satisfied with the price, a cheque could be dispensed for the equivalent amount
+offered.
 
+As a part of the solution, an application is to be designed, which takes the images of a
+damaged phone as input and quantifies the value of the phone based on the damage to the
+screen. Instead of a fixed price system that provides static output prices, without the
+consideration of the state of the phone, an ingenious system that estimates based on the
+condition of the phone can be developed.
 
-2.	Image Recognition System:
-  Idea: To develop an image recognition system to predict or verify the identity of facial data.(Could later be extended to expression            recognition)
-  Goal: To provide a security system interface that takes the facial data of a person and compares it to the existing database of facial          IDs, giving the output whether the given facial data exists already. This could be put to use for security systems that unlock based        on the face IDs.
-  Tech Stack:
-        o	Pytorch or Keras 
-        o	Python
-        o	Deep Learning
-        o	Image Processing
-3.	Data Visualization:
-  Idea: To develop a data visualization application that gives the pictorial and statistical representation of data collected from sources,         which could be extended to process and correlate the data inputs to provide meaningful summaries.
-  Goal: To provide an easy format of data interpretation to the end user, reducing the man hours spent on the calculations that need to be         invested in order to achieve these outputs.
-  Tech Stack:
-        o	D3.js 
-        o	Python
-        o	HTML
-        o	JavaScript
-        o	CSS
+To pull this off, a trained machine learning model is used to analyze the data set of
+captured images. The model is initially trained with data of various broken phone images. An
+interactive user interface with ReactJS, secured with authentication factors is designed for the
+ease of the customer where the model of the phone must be entered to gauge the original cost
+of the phone. Based on results, the percentage of cracks, combined with the standard model
+prices, final price of the mobile can be predicted.
+
+# Technology stack
+**Programming languages & Libraries**: Python, Pytorch, scikit-learn
+**Technologies**: Machine Learning, Computer Vision, Deep Learning
+**Web Technologies**: HTML5, CSS3, JavaScript, React, Redux, Node.JS, REST API
+**Miscellaneous** : SOA, Agile, Git, Anaconda
+
+# Architecture Diagram
+
+<img width="900" alt="architecture" src="https://github.com/SJSUFall2019-CMPE272/brokenPhone/blob/master/272%20Architechture%202.jpeg">
