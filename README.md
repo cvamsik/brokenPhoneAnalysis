@@ -36,6 +36,13 @@ prices, final price of the mobile can be predicted.
 
 <img width="900" alt="architecture" src="https://github.com/SJSUFall2019-CMPE272/brokenPhone/blob/master/272%20Architechture%202.jpeg">
 
+## Hill Statement
+ **Who** : A Mobile phone user 
+ 
+ **What** : Can trade in a broken mobile for cash
+ 
+ **Wow** : In considerably lower time than traditional selling procedure
+ 
 ## Persona
 
 <img height="900" width="800" alt="architecture" src="https://github.com/SJSUFall2019-CMPE272/brokenPhone/blob/master/Persona%40Sarah%20Brooks.png">
