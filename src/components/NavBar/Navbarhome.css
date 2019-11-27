@@ -1,0 +1,26 @@
+.navbar
+{
+    font: calibri;
+    font-size: 20px;
+    background: #f4f4f8 !important;
+}
+
+
+.navbar .navbar-opaque
+{
+    background: #fff !important;
+}
+
+.navbar .nav-item .nav-link
+{
+    color: #29a8ab;
+    font-family: Lato,Arial,Helvetica Neue,sans-serif;
+    line-height: 1.5rem;
+    min-height: 48px;
+
+}
+
+.navbar .nav-item .btn {
+    background-color: #29a8ab;
+    border-color: #29a8ab;
+}
