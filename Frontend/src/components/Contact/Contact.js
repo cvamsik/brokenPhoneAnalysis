@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Card from '../Cards/Card'
 
 
 class Contact extends Component {
@@ -24,7 +23,6 @@ class Contact extends Component {
                 <b> email: duvvurisrihari@gmail.com 
                    </b>
               </h2>
-              <Card/>
             </div>
           </div>
         </div>
