@@ -42,7 +42,7 @@ function CustomChatBot(props) {
         },
         {
           value: "Need to contact us?",
-          label: "Need to contact us?",
+          label: "Need to contact us??",
           trigger: ()=>{window.location.replace("./contact")}
         
         },
