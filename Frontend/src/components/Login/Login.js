@@ -50,6 +50,7 @@ export default class Login extends Component {
     axios.post(`${ROOT_URL}/users/login`, data)
     .then(res => {
       console.log(res.status +  "Resulyt bkwsde");
+      console.log('hi');
      // var resultData = res.data[0];
       if(res.status === 200){
      
