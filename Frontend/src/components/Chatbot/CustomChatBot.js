@@ -750,7 +750,7 @@ function CustomChatBot(props) {
 
     {
       id: "Done",
-      message: "Have a great day !!",
+      message: "Have a great day !",
       end: true
     }
   ];
