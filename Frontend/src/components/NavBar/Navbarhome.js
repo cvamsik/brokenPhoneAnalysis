@@ -89,6 +89,14 @@ class Navbarhome extends Component {
                 About Us <span className='sr-only'>current</span>
               </a>
             </li>
+            <li className='nav-item btn-link'>
+              <a className='nav-link'>
+                <Link to={'/faq'}>
+                  {' '}
+                  FAQ <span className='sr-only'>current</span>
+                </Link>
+              </a>
+            </li>
 
             <li className='nav-item btn-link'>
               <a className='nav-link'>
