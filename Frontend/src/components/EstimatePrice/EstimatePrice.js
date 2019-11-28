@@ -78,10 +78,11 @@ class EstimatePrice extends Component {
   }
   selectModel = event => {
     event.preventDefault()
-
+    // selected model
     this.setState({
       modelSelected: this.state[event.target.id]
     })
+    // selected brand
     this.setState({ Brand: event.target.id })
   }
 
