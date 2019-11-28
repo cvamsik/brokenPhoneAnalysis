@@ -1,0 +1,16 @@
+.card{
+    font: Nutino;
+    background-color: #fff;
+    font-weight: 100px;
+    
+    width:1000px;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+}
+.accordian{
+    align-content: center;
+    margin-top: 100px;
+    position: absolute;
+    left: 15%;
+}

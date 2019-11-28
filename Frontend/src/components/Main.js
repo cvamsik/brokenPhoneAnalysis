@@ -11,6 +11,7 @@ import adminPage from './AdminPage/AdminPage'
 import ContactPage from './Contact/Contact'
 import Questionaire from './Questionaire/Questionaire'
 import EstimatePrice from './EstimatePrice/EstimatePrice'
+import faq from './FAQ/faq'
 
 // Create a Main Component
 class Main extends Component {
@@ -22,12 +23,13 @@ class Main extends Component {
           <Route path='/' component={Navbarhome} />
           <Route path='/login' exact component={LoginPage} />
           <Route path='/' exact component={landingPage} />
-          <Route path='/signUp' component={signUp} />
-          <Route path='/userPage' component={userPage} />
-          <Route path='/addService' component={adminPage} />
-          <Route path='/Contact' component={ContactPage} />
-          <Route path='/Questionaire' component={Questionaire} />
-          <Route path='/estimateprice' component={EstimatePrice} />
+          <Route path='/signUp' exact component={signUp} />
+          <Route path='/userPage' exact component={userPage} />
+          <Route path='/addService' exact component={adminPage} />
+          <Route path='/Contact' exact component={ContactPage} />
+          <Route path='/Questionaire' exact component={Questionaire} />
+          <Route path='/estimateprice' exact component={EstimatePrice} />
+          <Route path='/faq' exact component={faq} />
       
         </div>
       </BrowserRouter>

@@ -40,15 +40,17 @@ function CustomChatBot(props) {
             return 'Get Estimate'
           }
         },
+        //ddd
         {
           value: "Need to contact us?",
           label: "Need to contact us?",
-          trigger: "send contact details"
+          trigger: ()=>{window.location.replace("./contact")}
+        
         },
         {
           value: "Have FAQ",
           label: "FAQ can be referred here",
-          trigger: "FAQ link"
+          trigger: ()=>{window.location.replace("./faq")}
         }
       ]
     },
@@ -693,8 +695,8 @@ function CustomChatBot(props) {
       options: [
         {
           value: true,
-          label: "Your FAQ link is www.www.com",
-          trigger: "Asking options to help"
+          label:"Hello",
+          trigger: "Done"
         },
         {
           value: "false",
@@ -750,7 +752,7 @@ function CustomChatBot(props) {
 
     {
       id: "Done",
-      message: "Have a great day !",
+      message: "Have a great day !!",
       end: true
     }
   ];
