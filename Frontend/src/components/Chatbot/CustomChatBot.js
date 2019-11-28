@@ -40,9 +40,10 @@ function CustomChatBot(props) {
             return 'Get Estimate'
           }
         },
+        //ddd
         {
           value: "Need to contact us?",
-          label: "Need to contact us??",
+          label: "Need to contact us?",
           trigger: ()=>{window.location.replace("./contact")}
         
         },
