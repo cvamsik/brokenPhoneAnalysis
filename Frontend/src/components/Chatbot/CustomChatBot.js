@@ -43,12 +43,13 @@ function CustomChatBot(props) {
         {
           value: "Need to contact us?",
           label: "Need to contact us?",
-          trigger: "send contact details"
+          trigger: ()=>{window.location.replace("./contact")}
+        
         },
         {
           value: "Have FAQ",
           label: "FAQ can be referred here",
-          trigger: ()=>{window.location.replace("./contact")}
+          trigger: ()=>{window.location.replace("./faq")}
         }
       ]
     },
