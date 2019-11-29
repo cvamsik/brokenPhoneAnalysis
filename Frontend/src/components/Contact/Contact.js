@@ -17,7 +17,7 @@ class Contact extends Component {
               </h4>
               <h1>Thank you for your interest in Phone2Cash</h1>
               <p className="mb-3">
-              We're interested in hearing from you. Look at our options below for contact information
+              We're interested in hearing from you. Look below for contact information
               </p>{" "}
               <h2 className="text-primary display-6">
                 <b> email: duvvurisrihari@gmail.com 
