@@ -20,7 +20,7 @@ class Contact extends Component {
               We're interested in hearing from you. Look below for contact information
               </p>{" "}
               <h2 className="text-primary display-6">
-                <b> email: duvvurisrihari@gmail.com 
+                <b> email:  duvvurisrihari@gmail.com 
                    </b>
               </h2>
             </div>
