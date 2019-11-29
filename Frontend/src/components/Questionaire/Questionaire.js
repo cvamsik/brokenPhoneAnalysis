@@ -11,7 +11,7 @@ class Q extends Component {
       Qs: [
         'Does the device power on ?',
         'Does the screen fully light up ?',
-        'Are there cracks anywhere?'
+        'Are there cracks anywhere ?'
       ],
       Q0: 'A',
       Q1: 'B',
