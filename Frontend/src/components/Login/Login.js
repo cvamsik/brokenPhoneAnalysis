@@ -66,7 +66,7 @@ export default class Login extends Component {
     }
     else {
      
-        console.log("Invaid Login");
+        console.log("Invaid Login ");
         this.setState({
             authFlag : false,
             errorMessage : "Invalid Login",
