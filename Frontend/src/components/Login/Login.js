@@ -49,7 +49,7 @@ export default class Login extends Component {
     axios.defaults.withCredentials = true;
     axios.post(`${ROOT_URL}/users/login`, data)
     .then(res => {
-      console.log(res.status +  "Result bakwsde");
+      console.log(res.status +  "Result bkwsde");
      // var resultData = res.data[0];
       if(res.status === 200){
     
