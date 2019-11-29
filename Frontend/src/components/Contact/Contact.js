@@ -13,7 +13,7 @@ class Contact extends Component {
                 <b>Contact us</b>
               </h3>
               <h4 className="my-3">
-              - We are listening all time -
+              - We are always listening -
               </h4>
               <h1>Thank you for your interest in Phone2Cash</h1>
               <p className="mb-3">
