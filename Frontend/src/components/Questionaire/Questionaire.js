@@ -10,7 +10,7 @@ class Q extends Component {
     this.state = {
       Qs: [
         'Does the device power on ?',
-        'Does the screen fully light up?',
+        'Does the screen fully light up ?',
         'Are there cracks anywhere?'
       ],
       Q0: 'A',
