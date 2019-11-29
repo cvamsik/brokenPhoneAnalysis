@@ -52,8 +52,8 @@ export default class Login extends Component {
       console.log(res.status +  "Resulyt bkwsde");
      // var resultData = res.data[0];
       if(res.status === 200){
-     
-        console.log("Correct Login");
+    
+        console.log("Correct Login ");
         console.log(res);
       //localStorage.setItem('token', resultData.x);
       localStorage.setItem('name' , res.data.email);
