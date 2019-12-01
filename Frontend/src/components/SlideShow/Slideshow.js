@@ -105,7 +105,7 @@ class Slideshow extends Component {
         const { slide1, slide2, currentId } = this.state;
         const { slides } = this.props;
         return (
-            <div className={s.container}>
+            <div className={s.container} >
                 <Slide
                     image={slides[slide1.id]}
                     position={slide1.position}

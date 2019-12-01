@@ -14,7 +14,7 @@ export default class LandingPage extends Component {
   render() {
     return (
       <div class='landing'>
-       <SlideshowComponent />
+       {/* <SlideshowComponent /> */}
         <About />
         <Footer />
         <Chatbot />

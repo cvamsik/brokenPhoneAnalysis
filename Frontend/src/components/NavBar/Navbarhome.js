@@ -36,11 +36,7 @@ class Navbarhome extends Component {
     return (
       <nav className='navbar navbar-expand-sm navbar-dark bg-dark fixed-top'>
         <a className='navbar-brand' href='/'>
-          <img
-            src={logo}
-            style={{ width: '170px', height: '50px' }}
-            alt='Logo'
-          />
+         <p className='logoname'>Phone 2 Cash</p>
         </a>
 
         <div className='collapse navbar-collapse' id='navbarSupportedContent'>
