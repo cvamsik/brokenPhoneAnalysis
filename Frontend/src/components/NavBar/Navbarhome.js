@@ -34,9 +34,9 @@ class Navbarhome extends Component {
     })
 
     return (
-      <nav className='navbar navbar-expand-sm navbar-dark bg-dark fixed-top'>
+      <nav className='navbar navbar-expand-sm  fixed-top'>
         <a className='navbar-brand' href='/'>
-         <p className='logoname'>Phone 2 Cash</p>
+         <p style={{marginLeft:'50px', fontWeight:'strong', fontSize:'35px', font:'Satisfy'}} className='logoname'>Phone2Cash</p>
         </a>
 
         <div className='collapse navbar-collapse' id='navbarSupportedContent'>

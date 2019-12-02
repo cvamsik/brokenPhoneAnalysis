@@ -1,7 +1,7 @@
 .navbar {
   font: calibri;
   font-size: 20px;
-  background: #2C3531 !important;
+  background-blend-mode: luminosity;
 }
 
 .navbar .navbar-opaque {
@@ -9,7 +9,7 @@
 }
 
 .navbar .nav-item .nav-link {
-  color: #1d9496;
+  color: #fff;
   font-family: Lato, Arial, Helvetica Neue, sans-serif;
   line-height: 1.5rem;
   min-height: 48px;
@@ -21,7 +21,7 @@
 }
 
 a{
-  color: #1d9496;
+  color: #fff;
 }
 .logoname{
   font: sans-serif;

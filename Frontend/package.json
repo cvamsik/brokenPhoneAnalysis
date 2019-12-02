@@ -11,6 +11,8 @@
     "filepond": "^4.2.0",
     "filepond-plugin-image-preview": "^4.0.3",
     "html-react-parser": "0.0.4",
+    "mdbootstrap": "^4.10.0",
+    "mdbreact": "^4.23.0",
     "mocha": "^6.0.2",
     "prop-types": "^15.7.2",
     "randomcolor": "^0.5.4",
