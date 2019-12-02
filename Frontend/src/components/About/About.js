@@ -1,16 +1,25 @@
 import React, { Component } from "react";
+import gif3 from "../../images/1253802.gif";
+import gif from "../../images/ezgif.com-resize.gif";
+import gif4 from "../../images/ezgif.com-crop.gif"
+import gif2 from "../../images/SciFi_LoaderBlue.gif";
 
 class About extends Component {
   render() {
     return (
+      
     <div>
-      <div className="py-5">
+      <div className="py-0">
         <div className="about container" id="about">
           <div className="row">
-            <div className="px-5 col-md-8 text-center mx-auto">
+            <div className="px-0 col-md-20 text-center mx-auto">
               <h3 className="text-primary display-4">
                 <br></br>
-                <b>Phone broken ? No worries we are here</b>
+                <img src={gif3} height="500px" witdh="1000px"></img>
+                <img src={gif2} height="500px" witdh="1900px"></img>
+                <img src={gif4} height="500px" witdh="1000px"></img>
+                <br></br>              
+                <b>Phone broken ? No worries we are here </b>
               </h3>
               <h2 className="my-3">
               - Our Mission -
@@ -28,6 +37,8 @@ class About extends Component {
                 height="372"
                 src="https://www.youtube.com/embed/__sidP3SY-0"
               ></iframe>
+                    
+
               <h2 className="text-primary display-6">
                 <b> What and How are we gonna do!</b>
               </h2>
@@ -36,6 +47,7 @@ class About extends Component {
                 height="372"
                 src="https://www.youtube.com/embed/p4LnEafIzsk"
               ></iframe>
+              
             </div>
           </div>
         </div>

@@ -173,7 +173,7 @@ class EstimatePrice extends Component {
     }
 
     if (loggedIn) {
-      return <Redirect to='/userPage' />
+      return <Redirect to='/' />
     } else {
       return (
         <div>

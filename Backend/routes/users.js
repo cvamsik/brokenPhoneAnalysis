@@ -8,33 +8,33 @@ var cors = require('cors')
 
 var path = require('path')
 var fs = require('fs')
-var storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    console.log(file.originalname)
-    cb(null, 'public')
-  },
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + '-' + file.originalname)
-  }
-})
-
-// const storage = multer.diskStorage({
-//   destination: '../public/images/',
+// var storage = multer.diskStorage({
+//   destination: function (req, file, cb) {
+//     console.log()
+//     cb(null, './public/images')
+//   },
 //   filename: function (req, file, cb) {
-//     cb(
-//       null,
-//       file.fieldname +
-//         '_' +
-//         Date.now() +
-//         path.extname(file.originalname) +
-//         '.png'
-//     )
+//     cb(null, Date.now() + '-' + file.originalname)
 //   }
 // })
 
+const storage = multer.diskStorage({
+  destination: './public/images/',
+  filename: function (req, file, cb) {
+    cb(
+      null,
+      file.fieldname +
+        '_' +
+        Date.now() +
+        path.extname(file.originalname) +
+        '.png'
+    )
+  }
+})
+
 const upload = multer({
   storage: storage
-}).single('file')
+}).single('myImage')
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {
