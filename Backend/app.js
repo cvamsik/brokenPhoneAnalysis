@@ -3,6 +3,7 @@ var cookieParser = require('cookie-parser')
 // var mysql = require('mysql');
 var express = require('express')
 
+var router = express.Router()
 // .env
 require('dotenv').config()
 

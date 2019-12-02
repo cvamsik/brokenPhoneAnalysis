@@ -11,6 +11,7 @@ import adminPage from './AdminPage/AdminPage'
 import ContactPage from './Contact/Contact'
 import Questionaire from './Questionaire/Questionaire'
 import EstimatePrice from './EstimatePrice/EstimatePrice'
+import PicUpload from './PicUpload/PicUpload'
 import faq from './FAQ/faq'
 
 // Create a Main Component
@@ -29,8 +30,9 @@ class Main extends Component {
           <Route path='/Contact' exact component={ContactPage} />
           <Route path='/Questionaire' exact component={Questionaire} />
           <Route path='/estimateprice' exact component={EstimatePrice} />
+          <Route path='/uploadpicture' exact component={PicUpload} />
+
           <Route path='/faq' exact component={faq} />
-      
         </div>
       </BrowserRouter>
     )
