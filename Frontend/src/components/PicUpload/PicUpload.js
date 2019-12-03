@@ -97,6 +97,7 @@ class PicUpload extends Component {
   render () {
     return (
       <div
+        className="estimateprice"
         class='container-fluid'
         align='center'
         style={{ marginTop: '100px' }}

@@ -72,3 +72,16 @@ input[type=radio] {
   width: 10%;
   height: 0.8em;
 }
+.my-facebook-button-class {
+  background: white;
+  border-radius: 2px;
+  border-width: 0.05em 0.05em 0.05em 0.05em;
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  width: 209px;
+  height: 45px;
+  text-align: center;
+  box-shadow: 2px 2px 2px -2px gray;
+}

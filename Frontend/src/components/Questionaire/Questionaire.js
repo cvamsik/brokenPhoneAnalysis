@@ -4,7 +4,7 @@ import axios from 'axios'
 import cookie from 'react-cookies'
 import { Redirect } from 'react-router'
 
-class Q extends Component {
+class Questionnaire extends Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -68,18 +68,24 @@ class Q extends Component {
             </div>
           </div>
         </div>
+        <br/>   
+
       </div>
+      
     ))
     return (
-      <div class='container' align='center' style={{ marginTop: '100px' }}>
-        "Questionnaire"
+      <div className="estimatecontent">
+      <div class='container' align='center'>
+        <h3 class="display-4">Few Answers Please</h3>
+        <br/>
         <p>{Questions}</p>
-        <button className='btn  btn-outline-info' onClick={this.onnext}> Get Estimate</button>
+        <button className='btn btn-outline-info' onClick={this.onnext}> Get Estimate</button>
         {this.state.Q0}
         {this.state.Q1}
         {this.state.Q2}
       </div>
+      </div>
     )
   }
 }
-export default Q
+export default Questionnaire

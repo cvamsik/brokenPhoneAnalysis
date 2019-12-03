@@ -17,7 +17,7 @@ class Navbarhome extends Component {
     localStorage.removeItem('name')
     localStorage.removeItem('userName')
     localStorage.removeItem('userType')
-    this.props.history.push('/')
+    this.props.history.push('/home')
   }
 
   render () {
@@ -125,11 +125,12 @@ class Navbarhome extends Component {
                   {localStorage.getItem('userName')}
                 </a>
                 <div className='dropdown-menu' aria-labelledby='navbarDropdown'>
-                  <a className='dropdown-item'>
-                    <Link to='/' onClick={this.logout}>
+                  <button onClick={this.logout} className='dropdown-item'>
+                    {/* <Link to='/' >
                       Logout
-                    </Link>
-                  </a>
+                    </Link> */}
+                    Logout
+                  </button>
                 </div>
               </li>
             ) : (

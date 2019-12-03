@@ -77,15 +77,15 @@ def upload_file():
             result = predict(file_path)
             
             if result == 0:
-                label = 'No Crack'
+                label = 'Crack0'
             elif result == 1:
-                label = 'Crack Level 1'			
+                label = 'Crack1'			
             elif result == 2:
-                label = 'Crack Level 2'
+                label = 'Crack2'
             elif result == 3:
-                label = 'Crack Level 3'
+                label = 'Crack3'
             else:
-                label='hello'
+                label='NotFound'
             print('Res:')
             print(result)
             print(file_path)

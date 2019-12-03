@@ -131,18 +131,18 @@ class EstimatePrice extends Component {
           <div class='dropdown'>
             <button
               class='btn btn-light dropdown-toggle'
-              style={{
-                // float: 'right',
-                position: 'relative',
-                align: 'center',
-                color: 'black',
-                fontSize: '19px',
-                fontWeight: 'bold',
-                width: '50%',
-                height: '50px',
-                lineHeight: '50px',
-                padding: '0px'
-              }}
+              // style={{
+              //   // float: 'right',
+              //   position: 'relative',
+              //   align: 'center',
+              //   color: 'black',
+              //   fontSize: '19px',
+              //   fontWeight: 'bold',
+              //   width: '50%',
+              //   height: '50px',
+              //   lineHeight: '50px',
+              //   padding: '0px'
+              // }}
               type='button'
               id='dropdownMenu2'
               data-toggle='dropdown'
@@ -161,7 +161,7 @@ class EstimatePrice extends Component {
     let estimatorButton = null
     if (this.state.showButton) {
       estimatorButton = (
-        <div>
+        <div className="nextbutton">
           <button
             id='getEstimate'
             className='btn btn-outline-info'
@@ -186,13 +186,15 @@ class EstimatePrice extends Component {
             </div>
             <br/>
 
-            <div  align='center'>
+            <div  className="estimate" align='center'>
               <div>
+                <br/>
               <p class='lead' align='CENTER'>
                 
                 Choose your Device Brand
               </p>
               </div>
+              <br/>
 
               <div class='dropdown'>
                 <button
@@ -221,8 +223,11 @@ class EstimatePrice extends Component {
                   {brandslist}
                 </div>
               </div>
+              <br/>
               {availableModels}
+              <br/>
               {estimatorButton}
+              <br/>
             </div>
           {/* </div> */}
         </div>

@@ -11,4 +11,18 @@
   height: 100vh;  
   align-content: center;
   padding-top: 10%;
+  border-radius: 5px;
+}
+.estimate{
+  background: rgba(255,255,255,0.1);
+  width:600px;
+  margin-left: 35%;
+  border-radius: 3px;
+}
+.btn-outline-info{
+  background:rgba(255,255,255,0.9);
+  outline:none;
+  border:none;
+  width:auto;
+  color:black;
 }
