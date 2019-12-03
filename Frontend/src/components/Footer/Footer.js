@@ -1,8 +1,10 @@
 import React, { Component } from "react";
+import './Footer.js'
 
 class Footer extends Component {
   render() {
     return (
+      <div className="footercontainer">
       <div className="py-3">
         <div className="container">
           <div className="row">
@@ -43,11 +45,12 @@ class Footer extends Component {
           <div className="row">
             <div className="col-md-12 text-center">
               <p className="mt-2 mb-0">
-                © 2019 Joseph Franco. All rights reserved
+                © CMPE 272 Team 1-BrokenPhone
               </p>
             </div>
           </div>
         </div>
+      </div>
       </div>
     );
   }

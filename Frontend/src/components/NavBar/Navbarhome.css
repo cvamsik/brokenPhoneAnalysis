@@ -1,13 +1,15 @@
 .navbar {
   font: calibri;
   font-size: 20px;
-  
+  color:white;
   border-bottom: 2px ;
   border-bottom-color: black;
   width:100vw;
 }
 
-
+.dropdown-menu{
+  background: rgba(255,255,255,0.2);
+}
 
 .navbar .nav-item .nav-link {
  

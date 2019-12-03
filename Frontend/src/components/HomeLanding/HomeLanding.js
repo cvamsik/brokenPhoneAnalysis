@@ -12,8 +12,9 @@ class HomeLanding extends Component {
                 <div className='content'>
             <section className="">
             <h3 class="display-3 text-white text-center" >Broken Phone</h3>
-            <h3 class="display-4 mt-0 text-center" >The Simple Four Step Process</h3>
-
+            <br/>
+            <h3 class="display-4 mt-1 mb-2 text-center" >The Simple Four Step Process</h3>
+          <br/><br/>
               
             <MDBRow>
                 <MDBCol >

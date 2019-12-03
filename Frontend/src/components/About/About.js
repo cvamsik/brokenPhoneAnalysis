@@ -8,7 +8,7 @@ class About extends Component {
   render() {
     return (
       
-    <div>
+    <div className="faqcontent">
       <div className="py-0">
         <div className="about container" id="about">
           <div className="row">

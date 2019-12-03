@@ -12,11 +12,13 @@
     margin-top: 10% ;
     margin-left: 25%;
     position: absolute;
+    font-size: 18px;
     
 }
 .faqcontent{
     background-image: url('../../images/allbg.jpg');
     color:white;
+    font-size: 18px;
     scroll-padding-top: 300px;
     /* Center and scale the image nicely */
     background-position: center;

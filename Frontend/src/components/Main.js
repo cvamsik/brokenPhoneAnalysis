@@ -14,6 +14,7 @@ import EstimatePrice from './EstimatePrice/EstimatePrice'
 import PicUpload from './PicUpload/PicUpload'
 import faq from './FAQ/faq'
 import HomeLanding from './HomeLanding/HomeLanding'
+import Footer from './Footer/Footer'
 
 // Create a Main Component
 class Main extends Component {
@@ -35,6 +36,7 @@ class Main extends Component {
           <Route path='/uploadpicture' exact component={PicUpload} />
 
           <Route path='/faq' exact component={faq} />
+          <Route path='/footer'  component={Footer}/>
         </div>
       </BrowserRouter>
     )
