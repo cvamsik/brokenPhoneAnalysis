@@ -61,8 +61,6 @@ h1 {
 .display-4 {
   padding-top: 10%;
   padding-bottom: 10%;
-  font-family: Quicksand, sans-serif;
-  font-style: italic;
-  font-weight: bolder;
+
   color: white;
 }
