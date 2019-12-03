@@ -5,6 +5,7 @@ import cookie from 'react-cookies'
 import { Redirect } from 'react-router'
 import { ROOT_URL } from '../../URLSettings'
 import { FLASK_URL } from '../../URLSettings'
+import logo from './upload.png'
 
 class PicUpload extends Component {
   constructor (props) {
@@ -52,9 +53,7 @@ class PicUpload extends Component {
     event.preventDefault()
     const data = new FormData()
     // this.setState({selectedImg: })
-    this.setState({
-      selectedImg: URL.createObjectURL(event.target.files[0])
-    })
+
     data.append('file', this.state.selectedFile)
     console.log(...data)
     const config = {
@@ -94,59 +93,71 @@ class PicUpload extends Component {
         align='center'
         style={{ marginTop: '100px' }}
       >
-        <div class='container' align='center' style={{ marginTop: '100px' }}>
-          <div class='row'>
-            <div class='col-md-6'>
-              <form onSubmit={this.hitFlask} enctype='multipart/form-data'>
-                <input
-                  type='file'
-                  onChange={this.onChangeHandler}
-                  name='file'
-                />
-                <input type='submit' value='Upload' />
-              </form>
-              {/* <form
-                onSubmit={this.onClickHandler}
-                enctype='multipart/form-data'
-              >
-                <div class='form-group files'>
-                  <label>Upload Your File </label>
-                  <input
-                    type='file'
-                    name='file'
-                    class='form-control btn  btn-outline-info'
-                    multiple=''
-                    onChange={this.onChangeHandler}
-                  />
-                </div>
-                {this.state.selectedImg ? (
-                  <div class='form-group'>
-                    <img
-                      class='preview-img'
-                      // src='http://simpleicon.com/wp-content/uploads/account.png'
-                      src={this.state.selectedImg}
-                      alt='Preview Image'
-                      width='200'
-                      height='200'
+        <table>
+          <td>
+            <div class='container' style={{ marginTop: '100px' }}>
+              <div class='row'>
+                <div class='col-md-6'>
+                  <form
+                    align='center'
+                    onSubmit={this.hitFlask}
+                    enctype='multipart/form-data'
+                  >
+                    {this.state.selectedImg ? (
+                      <div class='form-group'>
+                        <img
+                          class='preview-img'
+                          style={{ borderRadius: '20px' }}
+                          src={this.state.selectedImg}
+                          alt='Preview Image'
+                          width='200'
+                          height='200'
+                        />
+                      </div>
+                    ) : (
+                      <div class='form-group'>
+                        <img
+                          class='preview-img'
+                          src={logo}
+                          alt='Preview Image'
+                          width='200'
+                          height='200'
+                        />
+                      </div>
+                    )}
+                    <input
+                      class='form-control btn  btn-outline-info'
+                      type='file'
+                      onChange={this.onChangeHandler}
+                      name='file'
                     />
-                  </div>
-                ) : null}
-                {this.state.selectedFile ? (
-                  <div class='form-group'>
-                    <button
-                      type='submit'
-                      className='form-control btn  btn-info'
-                    >
-                      Upload
-                    </button>
-                  </div>
-                ) : null}
-              </form> */}
+                    <br />
+                    <br />
+                    {this.state.selectedFile ? (
+                      <div class='form-group'>
+                        <input
+                          type='submit'
+                          value='Upload'
+                          className='form-control btn  btn-info'
+                        />
+                      </div>
+                    ) : null}
+                  </form>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
+          </td>
+          <td>
+            <div class='container' style={{ marginTop: '100px' }}>
+              <p>Model details</p>
+              <p>Brand: {localStorage.getItem('Brand')}</p>
+              <p>Model: {localStorage.getItem('Model')}</p>
+            </div>
+          </td>
+        </table>
       </div>
     )
   }
 }
 export default PicUpload
+

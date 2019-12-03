@@ -54,9 +54,11 @@ app.get('/ping', function (req, res) {
 
 var indexRouter = require('./routes/index')
 var usersRouter = require('./routes/users')
+var phonesRouter = require('./routes/phones')
 
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
+app.use('/phones', phonesRouter)
 
 app.listen(3001, function () {
   console.log('Server listening on port 3001')
