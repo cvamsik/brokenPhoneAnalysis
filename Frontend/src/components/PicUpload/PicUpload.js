@@ -12,8 +12,14 @@ class PicUpload extends Component {
     super(props)
     this.state = {
       selectedFile: null,
-      selectedImg: null
+      selectedImg: null,
+      price: '',
+      crack:''
     }
+  }
+  componentDidMount () {
+    localStorage.setItem('price', '')
+    this.setState({ price: '' })
   }
   onChangeHandler = event => {
     console.log(event.target.files[0])
@@ -22,32 +28,6 @@ class PicUpload extends Component {
     })
     this.setState({ selectedFile: event.target.files[0], loaded: 0 })
   }
-  //   uploadImage = e => {
-  //     e.preventDefault()
-  //     const formData = new FormData()
-  //     let email = sessionStorage.getItem('email')
-  //     formData.append('myImage', this.state.file, email)
-  //     const config = {
-  //       headers: {
-  //         'content-type': 'multipart/form-data'
-  //       }
-  //     }
-  //     axios
-  //       .post(`${ROOT_URL}/users/uploadpicture`, formData, config)
-  //       .then(response => {
-  //         let data = { email: email }
-  //         axios.post(`${ROOT_URL}/userimage`, data).then(response => {
-  //           // update the state with the response data
-  //           console.log('Axios get:', response.data)
-  //           this.setState({
-  //             img: 'data:image/png;base64, ' + response.data
-  //           })
-  //         })
-  //         console.log('The file is successfully uploaded')
-  //       })
-  //       .catch(error => {})
-  //     // prevent page from refresh
-  //   }
 
   onClickHandler = event => {
     event.preventDefault()
@@ -61,12 +41,33 @@ class PicUpload extends Component {
         'content-type': 'multipart/form-data'
       }
     }
-    
+    axios.defaults.withCredentials = true
     axios.post(`${ROOT_URL}/users/uploadpicture`, data, config).then(res => {
       console.log('Response' + JSON.stringify(res))
     })
   }
-
+  calculate () {
+    console.log('In calculate')
+    let deductionRatio = 0
+    switch (this.state.crack) {
+      case 'CrackO':
+        deductionRatio = 0.1
+        break
+      case 'Crack1':
+        deductionRatio = 0.3
+        break
+      case 'Crack2':
+        deductionRatio = 0.5
+        break
+      case 'Crack3':
+        deductionRatio = 0.7
+        break
+    }
+    console.log('deductionRatio' + deductionRatio)
+    let dummyPrice = Math.round(localStorage.getItem('price') * deductionRatio)
+    console.log('dummy price' + dummyPrice)
+    this.setState({ price: dummyPrice })
+  }
   hitFlask = event => {
     event.preventDefault()
     const data = new FormData()
@@ -83,28 +84,37 @@ class PicUpload extends Component {
     // axios.defaults.withCredentials = true
     axios.post(`${FLASK_URL}/`, data).then(res => {
       console.log('Response' + JSON.stringify(res.data))
-      if(res.data[0]){
-        localStorage.setItem('ModelValue',res.data[0])
-        this.props.history.push('/loading')
-      }
-      else{
-        window.alert("Image Invalid")
-      }
+      this.setState({ crack: res.data })
+
+      axios
+        .get(`${ROOT_URL}/phones/getprice`, {
+          params: {
+            brand: localStorage.getItem('Brand'),
+            model: localStorage.getItem('Model')
+          }
+        })
+        .then(res => {
+          console.log('Response' + JSON.stringify(res.data[0].price))
+          localStorage.setItem('price', res.data[0].price)
+          console.log('calling calculate')
+          this.calculate()
+        })
     })
-    
   }
+
 
   render () {
     return (
+      <div className="estimatecontent">
+        <div className="estimate " style={{width:'700px'}}>
       <div
-        className="estimateprice"
         class='container-fluid'
         align='center'
-        style={{ marginTop: '100px' }}
+        style={{paddingBottom:'40px'}}
       >
         <table>
           <td>
-            <div class='container' style={{ marginTop: '100px' }}>
+            <div class='container' >
               <div class='row'>
                 <div class='col-md-6'>
                   <form
@@ -126,11 +136,12 @@ class PicUpload extends Component {
                     ) : (
                       <div class='form-group'>
                         <img
-                          class='preview-img'
+                          class='preview-img ml-5'
                           src={logo}
                           alt='Preview Image'
-                          width='200'
-                          height='200'
+                          width='150'
+                          height='150'
+                          
                         />
                       </div>
                     )}
@@ -158,12 +169,19 @@ class PicUpload extends Component {
           </td>
           <td>
             <div class='container' style={{ marginTop: '100px' }}>
-              <p>Model details</p>
-              <p>Brand: {localStorage.getItem('Brand')}</p>
-              <p>Model: {localStorage.getItem('Model')}</p>
+              <p class='lead' style={{fontSize:'30px'}}>Model details</p>
+              <p class='lead' style={{fontSize:'30px'}}>Brand: {localStorage.getItem('Brand')}</p>
+              <p class='lead' style={{fontSize:'30px'}}>Model: {localStorage.getItem('Model')}</p>
+              <p class='lead' style={{fontSize:'30px'}}>Price:
+                {this.state.price ? this.state.price : ''}</p>
+
+              
             </div>
           </td>
+          
         </table>
+      </div>
+      </div>
       </div>
     )
   }
