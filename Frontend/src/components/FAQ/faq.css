@@ -1,8 +1,7 @@
 .card{
     font: Nutino;
-    background-color: #fff;
     font-weight: 100px;
-    
+    background:rgba(255,255,255,0.2);
     width:1000px;
     justify-content: center;
     align-content: center;
@@ -10,7 +9,22 @@
 }
 .accordian{
     align-content: center;
-    margin-top: 100px;
+    margin-top: 10% ;
+    margin-left: 25%;
     position: absolute;
-    left: 15%;
+    
+}
+.faqcontent{
+    background-image: url('../../images/allbg.jpg');
+    color:white;
+    scroll-padding-top: 300px;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;  
+    align-content: center;
+      
 }
