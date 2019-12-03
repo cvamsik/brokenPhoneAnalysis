@@ -6,6 +6,8 @@ import axios from 'axios';
 import {Link, Redirect} from 'react-router-dom';
 import {ROOT_URL} from '../../URLSettings';
 import '../Login/Login.css'
+import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBCard, MDBInput } from 'mdbreact';
+
 
 const Checkbox = props => (
   <input type="checkbox" {...props} />
@@ -89,32 +91,51 @@ export default class signUp extends Component {
       else {
           return (
               <div className="Fullpage">
-                  <div className="LoginPage" align="center">
-                      <div className="Login">
-                          <div>
-                              <h2 align="center">Sign Up now!!</h2>
-                          </div>
-                          <form align="center">
+                  
+                
+    <MDBContainer style={{}} className="signincard">
+      <MDBRow>
+        <MDBCol md='6'>
+          <MDBCard 
+            className='card-image'
+            style={{
+              borderRadius: '10px',
+              marginLeft:'130%',
+              top:'150px',
+              backgroundImage:
+                'url(https://cdn.pixabay.com/photo/2015/11/07/11/59/foggy-1031703_960_720.jpg)',
+              background:'transparent',
+              width: '24rem'
+            }}
+          >
+           
+          
+                          <form align="center" width="100px" className="signupcard">
+                          <h2 className='white-text mb-5 mt-4 font-weight-bold'>
+                    <strong style={{color:'#fff'}}>SIGN UP  NOW</strong>
+                  
+                </h2>
                               <Form.Group controlId="email">
-                                  <Form.Label>Email</Form.Label>
                                   <Form.Control
                                       autoFocus
+                                      placeholder='Email'
                                       type="email"
                                       value={this.state.email}
                                       onChange={this.handleChange}
                                   />
                               </Form.Group>
                               <Form.Group controlId="password">
-                                  <Form.Label>Password</Form.Label>
+                                  
                                   <Form.Control
+                                      placeholder='Password'
                                       value={this.state.password}
                                       onChange={this.handleChange}
                                       type="password"
                                   />
                               </Form.Group>
                               <Form.Group controlId="name">
-                                  <Form.Label>Name</Form.Label>
                                   <Form.Control
+                                  placeholder='Name'
                                       value={this.state.name}
                                       onChange={this.handleChange}
                                       type="text"
@@ -137,10 +158,15 @@ export default class signUp extends Component {
 
                                   Create an account
                               </Button>
-                              Already a Member? <Link to="/login">Login</Link>
+                              <div style={{color:'#fff' ,weight:'bold'}}>Already a Member?</div> <Link to="/login">Login</Link>
                           </form>
-                      </div>
-                  </div>
+                   
+          </MDBCard>
+        </MDBCol>
+      </MDBRow>
+    </MDBContainer>
+
+
               </div>
           );
       }

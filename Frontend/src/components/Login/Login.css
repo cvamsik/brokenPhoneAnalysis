@@ -3,15 +3,15 @@ body {
   }
   
   h1 {
-    color: navy;
+    color: fff;
     margin-left: 20px;
   }
   
 
 
   .Login {
-    width:"200px";
-    height:"200px"
+    width:"20px";
+    height:"20px";
   }
   .LoginPage{
    
@@ -56,4 +56,19 @@ body {
 
 .signincard{
   left: 400px;;
+  font-size: 20px;
+  color: #fff;
+}
+
+.signupcard{
+  font-size: 20px;
+  color: #fff;
+  font-weight: 900;
+  
+}
+
+input[type=radio] {
+  border: 0px;
+  width: 10%;
+  height: 0.8em;
 }

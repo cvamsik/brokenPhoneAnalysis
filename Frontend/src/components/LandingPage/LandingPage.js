@@ -13,7 +13,7 @@ import Chatbot from "../Chatbot/CustomChatBot";
 export default class LandingPage extends Component {
   render() {
     return (
-      <div class='landing'>
+      <div class='landing' >
        {/* <SlideshowComponent /> */}
         <About />
         <Footer />

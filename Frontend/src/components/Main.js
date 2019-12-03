@@ -13,6 +13,7 @@ import Questionaire from './Questionaire/Questionaire'
 import EstimatePrice from './EstimatePrice/EstimatePrice'
 import PicUpload from './PicUpload/PicUpload'
 import faq from './FAQ/faq'
+import HomeLanding from './HomeLanding/HomeLanding'
 
 // Create a Main Component
 class Main extends Component {
@@ -22,6 +23,7 @@ class Main extends Component {
         <div>
           {/* Render Different Component based on Route */}
           <Route path='/' component={Navbarhome} />
+          <Route path='/Home' exact component={HomeLanding} />
           <Route path='/login' exact component={LoginPage} />
           <Route path='/' exact component={landingPage} />
           <Route path='/signUp' exact component={signUp} />

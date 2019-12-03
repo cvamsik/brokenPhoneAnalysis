@@ -15,9 +15,9 @@ class About extends Component {
             <div className="px-0 col-md-20 text-center mx-auto">
               <h3 className="text-primary display-4">
                 <br></br>
-                <img src={gif3} height="500px" witdh="1000px"></img>
-                <img src={gif2} height="500px" witdh="1900px"></img>
-                <img src={gif4} height="500px" witdh="1000px"></img>
+               
+                {/* <img src={gif2} height="500px" witdh="1900px"></img> */}
+                {/* <img src={gif4} height="500px" witdh="1000px"></img> */}
                 <br></br>              
                 <b>Phone broken ? No worries we are here </b>
               </h3>
