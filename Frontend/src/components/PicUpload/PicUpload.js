@@ -61,7 +61,7 @@ class PicUpload extends Component {
         'content-type': 'multipart/form-data'
       }
     }
-    axios.defaults.withCredentials = true
+    
     axios.post(`${ROOT_URL}/users/uploadpicture`, data, config).then(res => {
       console.log('Response' + JSON.stringify(res))
     })
@@ -83,7 +83,15 @@ class PicUpload extends Component {
     // axios.defaults.withCredentials = true
     axios.post(`${FLASK_URL}/`, data).then(res => {
       console.log('Response' + JSON.stringify(res.data))
+      if(res.data[0]){
+        localStorage.setItem('ModelValue',res.data[0])
+        this.props.history.push('/loading')
+      }
+      else{
+        window.alert("Image Invalid")
+      }
     })
+    
   }
 
   render () {

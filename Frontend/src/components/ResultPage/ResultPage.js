@@ -30,7 +30,7 @@ export default class ResultPage extends Component {
         </h4><h4 className="my-3">
         - Your model is - {localStorage.getItem('Model')}
         </h4><h4 className="my-3">
-        - Your estimated price is - 
+        - Your estimated price is - {localStorage.getItem('ModelValue')}
         </h4>
 
         </div>

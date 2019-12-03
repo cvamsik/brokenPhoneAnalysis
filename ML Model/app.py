@@ -5,6 +5,9 @@ from flask import Flask, render_template, request, redirect, url_for
 from werkzeug.utils import secure_filename
 from keras.preprocessing.image import ImageDataGenerator, load_img, img_to_array
 from keras.models import Sequential, load_model
+from flask_cors import CORS
+
+
 import numpy as np
 import argparse
 import imutils
@@ -52,6 +55,7 @@ def allowed_file(filename):
            filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
 
 app = Flask(__name__)
+cors = CORS(app, resources={r"/": {"origins": "*"}})
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 @app.route("/")
@@ -89,7 +93,9 @@ def upload_file():
 
             os.rename(file_path, os.path.join(app.config['UPLOAD_FOLDER'], filename))
             print("--- %s seconds ---" % str (time.time() - start_time))
-            return render_template('template.html', label=label, imagesource='../uploads/' + filename)
+            print(label)
+            # return render_template('template.html', label=label, imagesource='../uploads/' + filename)
+            return label
 
 from flask import send_from_directory
 

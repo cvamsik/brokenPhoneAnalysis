@@ -64,7 +64,7 @@ export default class Login extends Component {
       this.setState({
         authFlag : true
     }) 
-    this.props.history.push('/userPage')
+    this.props.history.push('/estimateprice')
     }
     else {
      

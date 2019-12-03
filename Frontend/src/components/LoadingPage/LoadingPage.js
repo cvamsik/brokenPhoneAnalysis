@@ -29,7 +29,7 @@ export default class LoadingPage extends Component {
   render() {
     if (this.state.redirect) {
         return (
-            <Redirect to={'/resultpage'} />
+            <Redirect to={'/result'} />
         )
     }
     return (
