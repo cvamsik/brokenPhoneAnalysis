@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { MDBRow,MDBCol ,MDBIcon} from "mdbreact";
 import 'feather-icons';
 import './HomeLanding.css';
+import About from '../About/About'
 
 class HomeLanding extends Component {
     state = {  }
@@ -121,7 +122,6 @@ class HomeLanding extends Component {
             </MDBRow>
           </section>
           </div>
-
             </div>
             </div>
 

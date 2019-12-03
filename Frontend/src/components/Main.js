@@ -15,6 +15,9 @@ import PicUpload from './PicUpload/PicUpload'
 import faq from './FAQ/faq'
 import HomeLanding from './HomeLanding/HomeLanding'
 import Footer from './Footer/Footer'
+import LandingPage from './LandingPage/LandingPage'
+import ResultPage from './ResultPage/ResultPage'
+import LoadingPage from './LoadingPage/LoadingPage'
 
 // Create a Main Component
 class Main extends Component {
@@ -34,6 +37,8 @@ class Main extends Component {
           <Route path='/Questionaire' exact component={Questionaire} />
           <Route path='/estimateprice' exact component={EstimatePrice} />
           <Route path='/uploadpicture' exact component={PicUpload} />
+          <Route path='/loading' exact component={LoadingPage}/>
+          <Route path='/result' exact component={ResultPage}/>
 
           <Route path='/faq' exact component={faq} />
           <Route path='/footer'  component={Footer}/>

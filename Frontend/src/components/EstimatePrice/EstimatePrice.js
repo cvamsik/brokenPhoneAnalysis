@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link, Redirect } from 'react-router-dom'
 import './EstimatePrice.css'
+import '../HomeLanding/HomeLanding.css'
 import axios from 'axios'
 // import GoogleLogin from 'react-google-login'
 import { ROOT_URL } from '../../URLSettings'
@@ -176,38 +177,38 @@ class EstimatePrice extends Component {
       return <Redirect to='/' />
     } else {
       return (
-        <div>
-          <div class='container' />
-          <div class='jumbotron jumbotron-fluid'>
+        <div className='estimatecontent'>
             <div class='container'>
               <h1 class='display-4' align='CENTER'>
                 <p />
                 For your Broken Phone needs
               </h1>
             </div>
-            {/* <div className='LoginPage' align='center'>
-              <div />
-            </div> */}
+            <br/>
 
-            <div className='Login' align='center'>
+            <div  align='center'>
               <div>
-                <h2 class='header'>Choose Your Device Type</h2>
+              <p class='lead' align='CENTER'>
+                
+                Choose your Device Brand
+              </p>
               </div>
+
               <div class='dropdown'>
                 <button
                   class='btn btn-light dropdown-toggle'
-                  style={{
-                    // float: 'right',
-                    position: 'relative',
-                    align: 'center',
-                    color: 'black',
-                    fontSize: '19px',
-                    fontWeight: 'bold',
-                    width: '50%',
-                    height: '50px',
-                    lineHeight: '50px',
-                    padding: '0px'
-                  }}
+                  // style={{
+                  //   // float: 'right',
+                  //   position: 'relative',
+                  //   align: 'center',
+                  //   color: 'black',
+                  //   fontSize: '19px',
+                  //   fontWeight: 'bold',
+                  //   width: '50%',
+                  //   height: '50px',
+                  //   lineHeight: '50px',
+                  //   padding: '0px'
+                  // }}
                   type='button'
                   id='dropdownMenu2'
                   data-toggle='dropdown'
@@ -223,7 +224,7 @@ class EstimatePrice extends Component {
               {availableModels}
               {estimatorButton}
             </div>
-          </div>
+          {/* </div> */}
         </div>
       )
     }

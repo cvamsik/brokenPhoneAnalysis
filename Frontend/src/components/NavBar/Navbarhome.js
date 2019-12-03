@@ -44,7 +44,7 @@ class Navbarhome extends Component {
             {!loggedIn ? (
               <li className='nav-item btn-link'>
                 <a className='nav-link'>
-                  <Link to={'/userPage'}>
+                  <Link to={'/home'}>
                     {' '}
                     Home <span className='sr-only'>current</span>
                   </Link>
@@ -105,14 +105,7 @@ class Navbarhome extends Component {
 
             {!loggedIn ? (
               <li className='nav-item dropdown'>
-                <a
-                  className='nav-link dropdown-toggle'
-                  href='#'
-                  id='navbardrop'
-                  data-toggle='dropdown'
-                >
-                  States
-                </a>
+                
                 <div className='dropdown-menu'>{states}</div>
               </li>
             ) : (

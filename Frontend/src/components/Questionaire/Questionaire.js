@@ -27,6 +27,13 @@ class Q extends Component {
     console.log(e.target.id)
     this.setState({ [e.target.id]: e.target.value })
   }
+  onnext =e =>{
+    e.preventDefault()
+    localStorage.setItem('Q0',this.state.Q0)
+    localStorage.setItem('Q1',this.state.Q1)
+    localStorage.setItem('Q2',this.state.Q2)
+    this.props.history.push('/uploadpicture')
+  }
   render () {
     let Questions = this.state.Qs.map((Q, index) => (
       <div class='container' align='center' key={index + 1}>
@@ -67,7 +74,7 @@ class Q extends Component {
       <div class='container' align='center' style={{ marginTop: '100px' }}>
         "Questionnaire"
         <p>{Questions}</p>
-        <button className='btn  btn-outline-info'> Get Estimate</button>
+        <button className='btn  btn-outline-info' onClick={this.onnext}> Get Estimate</button>
         {this.state.Q0}
         {this.state.Q1}
         {this.state.Q2}
