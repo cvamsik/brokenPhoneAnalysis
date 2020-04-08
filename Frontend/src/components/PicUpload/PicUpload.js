@@ -6,6 +6,8 @@ import { Redirect } from 'react-router'
 import { ROOT_URL } from '../../URLSettings'
 import { FLASK_URL } from '../../URLSettings'
 import logo from './upload.png'
+import Modal from 'react-awesome-modal/lib'	
+import loader from '../../images/SciFi_LoaderBlue.gif'
 
 class PicUpload extends Component {
   constructor (props) {
@@ -14,12 +16,38 @@ class PicUpload extends Component {
       selectedFile: null,
       selectedImg: null,
       price: '',
-      crack:''
+      crack:'',
+      visible: false
     }
   }
   componentDidMount () {
     localStorage.setItem('price', '')
     this.setState({ price: '' })
+  }
+func()
+{ let p= new Promise( function(resolve,reject) { setTimeout(() => {
+    console.log('Hello, World!')
+    resolve('done')
+  }, 2000)
+})
+return p;
+}
+ async openModal () {
+    this.setState({
+      visible: true
+    })
+   
+    
+  let x= await this.func();
+  this.closeModal()
+  this.gotoresult()
+
+  }
+
+  closeModal () {
+    this.setState({
+      visible: false
+    })
   }
   onChangeHandler = event => {
     console.log(event.target.files[0])
@@ -67,6 +95,14 @@ class PicUpload extends Component {
     let dummyPrice = Math.round(localStorage.getItem('price') * deductionRatio)
     console.log('dummy price' + dummyPrice)
     this.setState({ price: dummyPrice })
+    localStorage.setItem('Price',this.state.price)
+    this.openModal()
+        
+    
+  }
+  gotoresult()
+  {
+     this.props.history.push('/result')
   }
   hitFlask = event => {
     event.preventDefault()
@@ -98,6 +134,8 @@ class PicUpload extends Component {
           localStorage.setItem('price', res.data[0].price)
           console.log('calling calculate')
           this.calculate()
+          
+
         })
     })
   }
@@ -172,14 +210,34 @@ class PicUpload extends Component {
               <p class='lead' style={{fontSize:'30px'}}>Model details</p>
               <p class='lead' style={{fontSize:'30px'}}>Brand: {localStorage.getItem('Brand')}</p>
               <p class='lead' style={{fontSize:'30px'}}>Model: {localStorage.getItem('Model')}</p>
-              <p class='lead' style={{fontSize:'30px'}}>Price:
-                {this.state.price ? this.state.price : ''}</p>
 
-              
             </div>
           </td>
           
         </table>
+        <Modal
+          visible={this.state.visible}
+          width='500'
+          height='400'
+          effect='fadeInUp'
+          style={{ borderRadius: '50%' ,background:'transparent' }}
+          onClickAway={() => this.closeModal()}
+        >
+          <div>
+            <img
+              class='preview-img'
+              style={{background:'transparent'}}
+              src={loader}
+              alt='Preview Image'
+              width='500'
+              height='400'
+            />
+
+            <a href='javascript:void(0);' onClick={() => this.closeModal()}>
+              Close this
+            </a>
+          </div>
+        </Modal>
       </div>
       </div>
       </div>

@@ -83,7 +83,8 @@ class HomeLanding extends Component {
               <MDBCol md="4" className="text-name">
                 <img
                   className="img-fluid"
-                  src="https://mdbootstrap.com/img/Mockups/Transparent/Small/iphone-portfolio1.png"
+                  src={require('../../images/iPhoneX.png')} 
+
                   alt=""
                   style={{height:'600px'}}
                 />
@@ -123,8 +124,9 @@ class HomeLanding extends Component {
           </section>
           </div>
             </div>
+            <About id="about"/>
             </div>
-
+         
 
         );
     }

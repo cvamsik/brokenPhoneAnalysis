@@ -6,6 +6,8 @@ import logo from '../../images/connect.png'
 import Redirect from 'react-router-dom/es/Redirect'
 import { States } from '../../URLSettings'
 import Contact from '../Contact/Contact'
+import { MDBSmoothScroll } from "mdbreact";
+
 
 class Navbarhome extends Component {
   constructor (props) {
